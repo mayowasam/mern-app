@@ -1,0 +1,39 @@
+.newuser{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.newuser__head{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    background-color: green;
+}
+
+.newuser__content{
+    flex: 1;
+    margin: 0 auto;
+   
+}
+
+.newuser__title >h2{
+    font-size: 20px;
+    font-weight: Bold;
+}
+
+.gender{
+   display: flex;
+   align-items: center;
+   padding: 10px;
+}
+
+.radio__header{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.radio__input{
+    margin: 10px;
+}
