@@ -86,11 +86,28 @@ const updateUser = async (req, res) =>{
     }
    
  }
+
+
+
+ const deleteUser = async (req, res) =>{
+    
+    try {
+        const {id} = req.body
+        console.log(id)
+        const user = await Profile.findByIdAndDelete(id)
+         res.status(202).json({success:true, user,message:"user deleted" })
+    }catch (error) {
+        res.status(500).json({success:false, message:error.message})
+
+    }
+   
+ }
  
  module.exports ={
      getData,
      updateUser,
      getOne,
      newUser,
-     login
+     login,
+     deleteUser
  }

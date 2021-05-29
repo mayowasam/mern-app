@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import{ useHistory } from 'react-router-dom'
 import axios from 'axios'
 import { Form, Button, Label, Input, FormGroup } from 'reactstrap'
 import './NewUser.css'
@@ -12,7 +13,7 @@ function NewUser() {
     const [newuser, setNewUserData] = useState({})
 
     console.log(newuser)
-
+    let history = useHistory()
 
     const addNew = (e) => {
         e.preventDefault()
@@ -26,6 +27,7 @@ function NewUser() {
         axios.post('http://localhost:3001/newuser',newuser)
         .then(res =>{
             console.log(res)
+            history.push('/')
         })
         .catch(err =>{
             console.log(err);
