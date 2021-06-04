@@ -7,7 +7,7 @@ const AppSchema = mongoose.Schema({
     email:{
         type : String,
         required: true,
-        unique: true
+        unique: true,
     },
 
     password:{
@@ -23,8 +23,12 @@ const AppSchema = mongoose.Schema({
     status:{
         type: String,
         required: true,
-    }
-})
+    },
+    
+},{
+    timestamps:true
+
+    })
 
 const Profile = mongoose.model('Profile', AppSchema)
 
